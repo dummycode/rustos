@@ -1,0 +1,1 @@
+StackVec push can fail because it cannot resize its backing structure whereas Vec can.

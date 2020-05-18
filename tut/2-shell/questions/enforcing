@@ -1,0 +1,1 @@
+These types enforce only being able to read and write to the pointer by only implementing Readable or Writable traits. For example, the Readable trait implements read(), but not write().

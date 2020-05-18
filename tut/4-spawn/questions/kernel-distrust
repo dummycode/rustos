@@ -1,0 +1,1 @@
+A process must trust the kernel to not overwrite its state when switching contexts and provide safe memory management.

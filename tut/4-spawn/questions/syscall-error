@@ -1,0 +1,1 @@
+The advantage is that you can return unsigned numbers. The disadvantage is you lose a result register.

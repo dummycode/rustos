@@ -1,0 +1,1 @@
+I would first start by going to the cluster number of the root directory. This would be byte offset 44 in the EBPB. Once there, you can look for the b directory inside the a directory cluser. Once found, you can loop it up in the FAT table to find the cluster for b. You can then repeat the process to find the c.txt file and use the FAT table to go to c.txt's first cluster.

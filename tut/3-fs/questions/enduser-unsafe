@@ -1,0 +1,1 @@
+Exposing safe interfaces to unsafe structures reduces the chance of error. *If* the safe interface and unsafe structure was written correctly, theoretically there will be far less bugs because of Rust's safety checks. We won't see similar benefits in C because there is no safety checks at compile time.

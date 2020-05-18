@@ -1,0 +1,1 @@
+You can set the PC to A via the ret instruction by first moving the value of A into lr and then calling ret. Similarly, you can set the PC to a via the eret instruction by moving the value of A into ELR_ELx and then calling eret.

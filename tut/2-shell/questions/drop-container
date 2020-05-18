@@ -1,0 +1,2 @@
+// TODO Idk
+You can't return a mutable reference to the &mut T because if the programmer were to drop it, it would drop our singleton instance and they wouldn't be able to use it elsewhere.

@@ -1,0 +1,1 @@
+You may want to unmasking IRQs while handling some exceptions. For instance, it is possible that when trying to handle an exception another exception is thrown. You would want to handle this second exception gracefully rather than having it masked.

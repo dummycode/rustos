@@ -1,0 +1,1 @@
+I could reduce internal fragmentation by adding blocks that are skipped for alignment purposes to the free lists so they can be used in the future. If a user keeps requesting large alignment blocks, the allocator will be skipping large portions of memory and never use them.

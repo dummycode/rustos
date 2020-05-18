@@ -1,0 +1,1 @@
+I think the max file size is 2^16 bytes. This is due to the file size storage in the directory entry only being 4 bytes.

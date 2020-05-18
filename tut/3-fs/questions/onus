@@ -1,0 +1,1 @@
+I think they might have chose to implement it this way as it allows the caller to tell the allocater exactly how it wants the memory block allocated, and keeps most of the overhead off of the allocater as the caller keeps track of what was allocated.

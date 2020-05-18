@@ -1,0 +1,1 @@
+Indexing and mutable indexing would fail because you cannot dereference the stack_vec variable if the DeRef trait is not implemented.

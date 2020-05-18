@@ -1,0 +1,1 @@
+If the address is 0xffff_ffff_c000_0000 or greater, the MMU will use the page table located at TTBR1_EL1, otherwise, it will use the page table located at TTBR0_EL1.

@@ -1,0 +1,1 @@
+The shell uses just about everything we have written. It uses Uart, which itself uses GPIO and Xmodem. It uses StackVec to build the string. Pretty much all of these modules use Volatile. 

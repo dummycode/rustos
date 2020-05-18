@@ -1,0 +1,1 @@
+I would set SPSel to 1 and then set SP_Elx to B, so the CPU sets the sp to B when it returns.

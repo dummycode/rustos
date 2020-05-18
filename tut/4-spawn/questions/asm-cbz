@@ -1,0 +1,1 @@
+Compares the value in a register to zero and branches to a label if they are equal.

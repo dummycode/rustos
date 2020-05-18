@@ -1,0 +1,6 @@
+memcpy:
+loop:
+ldr x3, [x0], #1
+str x3, [x1], #1
+cbnz x2, loop
+ret

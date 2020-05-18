@@ -1,0 +1,1 @@
+It uses the parser from parse_flow_control which limits the valid options to none, software, or hardware.

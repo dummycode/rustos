@@ -1,0 +1,1 @@
+You would write to GPSFSEL2, GPSET0, and GPCLR0. The physical pin is pin number 13.

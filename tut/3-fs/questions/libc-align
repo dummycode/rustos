@@ -1,0 +1,1 @@
+The memory addresses returned from libC are 8 or 16-byte aligned because if it wasn't, the processor couldn't read the address in one cycle and may even halt with a bus error. 

@@ -1,0 +1,1 @@
+This would be beneficial for runtime of our scheduling algorithm. If the number of waiting processes grew to be very large, the algorithm would have to iterate over them every time, whereas with a waiting queue it would not have to. I don't think this would change the average throughput though.

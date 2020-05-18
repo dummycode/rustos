@@ -1,0 +1,1 @@
+It cannot determine C code is safe because it knows nothing about the safety of the code. The code could be pre-compiled and is being linked so it has no way to determine safety. Whereas, Rust code was compiled by the Rust compiler so it knows it is safe.

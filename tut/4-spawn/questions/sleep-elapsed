@@ -1,0 +1,1 @@
+It's possible the process was not at the front of the queue when time is up, so it must wait a quantum until being awoken. This is way more likely than being woken up a the exact time the scheduler is ticked.

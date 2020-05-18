@@ -1,0 +1,1 @@
+The size of MacOS' kernel is ~15MB. I believe the kernel we write will be much smaller and should definitely fit within 64MB.

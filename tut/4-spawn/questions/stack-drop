@@ -1,0 +1,1 @@
+This section of memory is freed by the `drop` function on the Stack struct.

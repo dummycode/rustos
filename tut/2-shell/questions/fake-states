@@ -1,0 +1,1 @@
+If you let a user select the starting state, they could start with a Gpio pin be in the output state, but the memory mapped registers might not be set correctly.

@@ -1,0 +1,1 @@
+If we did not use an intrusive linked list, we would have to use alloc in our implementation of alloc to manage the lists. As you can see, this is a chicken before the egg issue because we cannot use alloc if we are writing it.

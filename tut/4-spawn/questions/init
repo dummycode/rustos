@@ -1,0 +1,4 @@
+_start - It reads the values of MPIDR_EL1. If it is zero, it sets the stack pointer to KER_STACK_BASE and calls kinit
+zeros_bss - This iterates from bss_beg to bss_end and zeroes the memory
+switch_to_el2 - This sets SCR, SPSR, and erets to itself now at EL2
+switch_to_el1 - This checks if it is el2, sets the SP, enables CNTP, adds AArch64, enables FP and SVE, sets SCTLR, sets exception handlers, changes execution level to EL1 and erets to itself

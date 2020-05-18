@@ -1,0 +1,1 @@
+This is correct behavior because if all processes are waiting on an event, but no event ever happens, there is no reason to keep checking the queue.

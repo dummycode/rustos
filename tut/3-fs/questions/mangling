@@ -1,0 +1,1 @@
+Rust requires this because it needs every function to be unique. Without it, functions in different namespaces would collide.

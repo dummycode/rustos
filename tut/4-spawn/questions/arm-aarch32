@@ -1,0 +1,1 @@
+I would write a 1 to the SPRSR.M field (bit 4 of the SPRSR)

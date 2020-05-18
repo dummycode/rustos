@@ -1,0 +1,1 @@
+I would look at the last two bytes of the first sector and compare them with x55 and xAA to determine if it is a valid MBR block.

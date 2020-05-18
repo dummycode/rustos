@@ -1,0 +1,1 @@
+It means that no two threads can hold onto Sd directly. By moving Sd out of sd_init, it ensures more than two Sd's cannot exist at the same time.

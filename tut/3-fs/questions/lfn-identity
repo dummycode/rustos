@@ -1,0 +1,1 @@
+If a directory entry is a LFN, the byte at offset 11 should have value of 0x0f.

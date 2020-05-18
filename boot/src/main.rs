@@ -1,0 +1,57 @@
+#![feature(asm)]
+#![feature(global_asm)]
+
+#![cfg_attr(not(test), no_std)]
+#![cfg_attr(not(test), no_main)]
+
+#[cfg(not(test))]
+mod init;
+
+use xmodem::Xmodem;
+use core::time::Duration;
+use core::fmt::Write;
+use pi;
+use pi::gpio;
+
+/// Start address of the binary to load and of the bootloader.
+const BINARY_START_ADDR: usize = 0x80000;
+const BOOTLOADER_START_ADDR: usize = 0x4000000;
+
+/// Pointer to where the loaded binary expects to be laoded.
+const BINARY_START: *mut u8 = BINARY_START_ADDR as *mut u8;
+
+/// Free space between the bootloader and the loaded binary's start address.
+const MAX_BINARY_SIZE: usize = BOOTLOADER_START_ADDR - BINARY_START_ADDR;
+
+/// Branches to the address `addr` unconditionally.
+unsafe fn jump_to(addr: *mut u8) -> ! {
+  asm!("br $0" : : "r"(addr as usize));
+  loop {
+    asm!("wfe" :::: "volatile")
+  }
+}
+
+fn kmain() -> ! {
+  // FIXME: Implement the bootloader.
+  let mut pin = gpio::Gpio::new(16).into_output();
+
+  let mut mini_uart = pi::uart::MiniUart::new();
+  mini_uart.set_read_timeout(Duration::from_millis(750));
+
+  let mut binary_memory = unsafe { core::slice::from_raw_parts_mut(BINARY_START, MAX_BINARY_SIZE) };
+
+  loop {
+    pin.set();
+
+    let xmodem = Xmodem::receive(&mut mini_uart, &mut binary_memory[..]);
+    match xmodem {
+      Err(e) => {
+        continue;
+      },
+      Ok(size) => { 
+        pin.clear();
+        unsafe { jump_to(BINARY_START); } 
+      }
+    }
+  }
+}

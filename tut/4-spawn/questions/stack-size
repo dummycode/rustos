@@ -1,0 +1,1 @@
+It could allocate space for a new stack, copy the old stack over, then set the stack pointer to be the top of the new stack.
